@@ -24,7 +24,6 @@ $('.sign-up-close').click(()=>{
 
 // email modal
 const emailMsg = function(isValid) {
-    $('.info-wrapper').html('<p>Email Info</p>')
 
     if (!isValid) {
         $('.sign-up-error-message').fadeIn(500)
