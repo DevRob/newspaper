@@ -454,47 +454,13 @@ jsver = 1.9;
 
     var data = {}
 
-    fetch('http://ip-api.com/json/')
-    // get location info with ip-api
-    .then(function(response) {
-        return response.json()
-    })
-    .then(function(locationData) {
-        data = locationData
-        buildBrowserinfo(browserInfo)
-        //console.log(browserInfo)
-    })
-
+    
     var browserInfo = {
-        // organise browser info detection into an object
-        connection: {
-            label: "Connection",
-            ipAddress: {
-                label: "Your IP address:",
-                value: function() { return (data.query) }
-            },
-            request: {
-                label: "Referer domain:",
-                value: function() { return document.referrer }
-            }
-        },
-        geoLocation: {
-            label: "Request Geo location",
-            location: {
-                label: "Location:",
-                value: function() {
-                    return `${data.city}, ${data.country} (${data.countryCode}), ${data.timezone.split('/')[0]}`
-                }
-            },
-            coordinates: {
-                label: "Coordinates:",
-                value: function() { return `lat: ${data.lat}, long: ${data.lon}` }
-            }
-        },
-        operatingSystem: {
+        //organise browser info detection into an object
+        browser: {
             label: "Your operating system",
-            request: {
-                label: "Request method:",
+            os: {
+                label: "Your operating system:",
                 value: function() {
                     let OSName="Unknown OS";
                     if (navigator.appVersion.indexOf("Win")!=-1) OSName="Windows"
@@ -504,9 +470,7 @@ jsver = 1.9;
 
                     return OSName
                 }
-            }
-        },
-        browser: {
+            },
             label: "Your browser",
             info: {
                 label: "Version:",
@@ -639,7 +603,7 @@ jsver = 1.9;
             }
         }
     }
-
+    buildBrowserinfo(browserInfo)
 </script>
 </body>
 </html>
