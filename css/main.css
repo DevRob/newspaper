@@ -62,6 +62,10 @@ ul {
     height: 100%;
 }
 
+.list-post-image {
+  max-width: 350px;
+}
+
 .snippet-wrapper {
     background-color: white;
     padding: 30px 40px;
