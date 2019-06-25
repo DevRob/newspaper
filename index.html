@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>AOL.co.uk | Breaking News, Sport, Features and Video</title>
+    <link rel="canonical" href="https://www.aol.co.uk/">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/slider.css">
+</head>
+<style>
+body * {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    font-family: Larsseit, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/*header*/
+header {
+    background-color: #0b0b0b;
+    height: 40px;
+}
+
+article {
+    padding: 20px;
+}
+
+.article-nav {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    z-index: 100;
+    background-color: #0b0b0b;
+}
+
+.article-nav li {
+    display: block;
+}
+
+article a {
+    text-decoration: none;
+    color: #444;
+}
+
+.page-container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.main-content .articles {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.main-content {
+    position: relative;
+}
+
+img {
+    width: 100%;
+}
+
+/*aside*/
+aside article {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+main, aside {
+    font-size: 10px;
+    color: black;
+}
+
+.aside-content .list-post-image {
+    max-width: 225px;
+}
+
+/*navigator*/
+.nav-container {
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto;
+    z-index: 201;
+    background-color: #f0f0f0;
+}
+
+.nav-container a {
+    display: none;
+}
+
+.slideshow-wrapper {
+    position: relative;
+}
+
+/*footer*/
+.m-footer__links__row1 a {
+    text-decoration: none;
+    font-size: 12px;
+    color: #00000080;
+    padding: 10px;
+    float: right;
+}
+
+.m-footer__search-wrapper {
+    border-bottom: 1px solid #00000080;
+}
+
+@media only screen and (min-width: 1024px) {
+    /*header*/
+    .article-nav {
+        margin-left: 200px;
+    }
+
+    .burger-menu-container {
+        display: none;
+    }
+
+    /*main*/
+    .page-container {
+        width: 80vw;
+    }
+
+    .page-content {
+        display: grid;
+        grid-template-columns: auto 225px;
+    }
+
+    .slideshow-wrapper {
+        width: calc(80vw - 225px);
+    }
+
+    .nav-container {
+        position: relative;
+        float: right;
+        background-color: #fff;
+    }
+
+    .nav-container a {
+        display: inline-block;
+    }
+
+    aside article {
+        display: block;
+    }
+
+    .info-btn {
+        width: 100%;
+    }
+
+    .m-make-homepage {
+        width: initial;
+        margin: 0;
+    }
+
+    .newsletter-signup-form {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .message-wrapper {
+        width: 80%;
+    }
+}
+
+/*----------------------------burgermenu----------------------------*/
+.burger-menu-container {
+  cursor: pointer;
+  float: right;
+  padding-right: 10px;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #fff;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+  transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+  transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+/*Modal*/
+.modal-content {
+    background-color: #f2f2f2;
+}
+
+.info-wrapper {    
+    padding: 60px;
+}
+
+.info-wrapper h2 {
+    margin: 0;
+    padding: 5px;
+    background-color: #b3b3b3;
+    color: white;
+    line-height: 15px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.info-wrapper p {
+    color: #666;
+    background-color: #f2f2f2;
+    margin: 0;
+    line-height: 15px;
+    font-size: 11px;
+}
+</style>
+<script type="text/javascript">
+var jsver = 1.0;
+</script>
+<script language="Javascript1.1">
+jsver = 1.1;
+</script>
+<script language="Javascript1.2">
+jsver = 1.2;
+</script>
+<script language="Javascript1.3">
+jsver = 1.3;
+</script>
+<script language="Javascript1.4">
+jsver = 1.4;
+</script>
+<script language="Javascript1.5">
+jsver = 1.5;
+</script>
+<script language="Javascript1.6">
+jsver = 1.6;
+</script>
+<script language="Javascript1.7">
+jsver = 1.7;
+</script>
+<script language="Javascript1.8">
+jsver = 1.8;
+</script>
+<script language="Javascript1.9">
+jsver = 1.9;
+</script>
+<body>
+    <div class="page-container">
+        <header>
+            <div class="burger-menu-container" onclick="burgerMenu(this)">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+            <div class="article-nav">
+                <ul>
+                    <li></li>
+                </ul>
+            </div>
+        </header>
+        <div class="page-content">
+            <main class="main-content">
+                <!-- SLIDESHOW -->
+                <div class="slideshow-wrapper">
+                    
+                        <div class="nav-container">
+                            <a class="e_prev e_nav" onclick="embla.previous()">&#10094;</a>
+                            <a class="e_next e_nav" onclick="embla.next()">&#10095;</a>
+                            <span class="e_pagination"></span>
+                            <div class="slider-info">
+                            </div>
+                        </div>
+                    <section class="slideshow" style="margin-bottom: 10px;">
+                            <h2>Slide show</h2>
+                            <div class="slideshow-body">
+                                <div class="slider"><!-- SLIDER STARTS HERE -->
+                                    <div id="touchsurface" class="embla">
+                                        <div class="embla__container">
+                                            <!--Loader animation-->
+                                            <div class="lds-roller">
+                                                <div></div>
+                                                <div></div>
+                                                <div></div>
+                                                <div></div>
+                                                <div></div>
+                                                <div></div>
+                                                <div></div>
+                                                <div></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- <a class="e_prev e_nav" onclick="embla.previous()">&#10094;</a>
+                                    <a class="e_next e_nav" onclick="embla.next()">&#10095;</a> -->
+                                </div><!-- SLIDER END --> 
+                            </div><!-- slideshow-body END -->
+                        </section>
+                </div>
+                
+                <section class="articles">
+                    <article>
+                        <div class="list-post-image">
+                            <a class="list-post-link" href="https://www.aol.co.uk/">
+                                <img alt="Paul McCartney" src="https://o.aolcdn.com/images/dims?thumbnail=650%2C427&amp;image_uri=http%3A%2F%2Fo.aolcdn.com%2Fhss%2Fstorage%2Fmidas%2F385b818e7b8b75835735919cb6b0de2c%2F206550230%2Fmacca.jpg&amp;client=cbc79c14efcebee57402&amp;signature=c5dc96899c91f1323e1ef75f12bd13a51e2d87a8">
+                            </a>
+                        </div>
+                        <div class="list-post-description">
+                            <h3 class="list-post-title">
+                                <a href="https://www.aol.co.uk/video/view/paul-mccartney-returns-to-abbey-road-crossing/5b574046c2ec10728c256a24/">
+                                Paul McCartney returns to iconic Abbey Road crossing
+                                </a>
+                            </h3>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="list-post-image">
+                            <a href="https://www.huffingtonpost.co.uk/">
+                                <img alt="Brexit" src="https://o.aolcdn.com/images/dims?thumbnail=650%2C427&amp;image_uri=http%3A%2F%2Fo.aolcdn.com%2Fhss%2Fstorage%2Fmidas%2F74f923070f989c520b79a0e997ec0b64%2F206550214%2Fhancock.jpg&amp;client=cbc79c14efcebee57402&amp;signature=d6416cd5721b6591f6335e25edf39a1ad371be0f" class="list-post-img">
+                            </a>
+                        </div>
+                        <div class="list-post-description">
+                            <h3 class="list-post-title">
+                                <a href="https://www.huffingtonpost.co.uk/entry/matt-hancock-stockpiling-brexit_uk_5b57510ae4b0fd5c73c9525f">
+                                    Brexit: Government may begin stockpiling medicine
+                                </a>
+                            </h3>
+                        </div>
+                    </article>
+                </section>
+                
+            </main>
+            <aside class="aside-content">
+                    <div class="m-make-homepage">
+
+                            <!-- Trigger/Open The Modal -->
+                            <button id="infoBtn" class="aol-btn info-btn">Display browser information</button>
+
+                            <!-- The Modal -->
+                            <div id="infoModal" class="modal">
+
+                                <!-- Modal content -->
+                                <div class="modal-content">
+                                    <span class="close">&times;</span>
+                                    <div class="info-wrapper">
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                <section class="articles">
+                    <article>
+                        <div class='list-post-image'>
+                            <a href='https://www.aol.co.uk/2018/07/24/guardiola-rules-out-manchester-city-move-for-pjanic/' title='Guardiola rules out Manchester City move for Pjanic'>
+                                <img alt="Pjanic" src="https://o.aolcdn.com/images/dims?thumbnail=144%2C95%2Cauto&amp;quality=80&amp;image_uri=https%3A%2F%2Fo.aolcdn.com%2Fimages%2Fdims%3Fresize%3D640%252C427%26image_uri%3Dhttp%253A%252F%252Fimages.performgroup.com%252Fdi%252Flibrary%252Fomnisport%252F9d%252F91%252Fmiralem-pjanic-cropped_7utl33yuo2eg1sjgozzavl0l6.jpg%253Ft%253D-851775956%26client%3Ds8fyf47wsyd98sdh%26signature%3D054a1cdc70a302aee4a71ba64b9dab582282d964&amp;client=cbc79c14efcebee57402&amp;signature=315492da09041a9fecaf43af29d2fd833fa6d82c">
+                            </a>
+                        </div>
+                        <div class='list-post-description'>
+                            <h3 class='list-post-title'>
+                                <a rel='bookmark' class='list-post-link' href='https://www.aol.co.uk/2018/07/24/guardiola-rules-out-manchester-city-move-for-pjanic/'> Guardiola rules out Manchester City move for Pjanic</a>
+                            </h3>
+                        </div>
+                    </article>
+                    <article>
+                        <div class='list-post-image'>
+                            <a rel='bookmark' class='list-post-link' href='https://www.aol.co.uk/2018/07/24/thiem-moves-past-moutet-as-monfils-halts-cecchinatos-momentum/' title='Thiem moves past Moutet as Monfils halts Cecchinato&#039;s momentum'>
+                                <img alt="Thiem" src="https://o.aolcdn.com/images/dims?thumbnail=144%2C95%2Cauto&amp;quality=80&amp;image_uri=https%3A%2F%2Fo.aolcdn.com%2Fimages%2Fdims%3Fresize%3D640%252C427%26image_uri%3Dhttp%253A%252F%252Fimages.performgroup.com%252Fdi%252Flibrary%252Fomnisport%252Fcd%252F5d%252Fdominicthiem-cropped_10dlsbv8q9o2108gx8mnl9py5.jpg%253Ft%253D-854974892%26client%3Ds8fyf47wsyd98sdh%26signature%3D6a619543ad1378a6a62e96523b2cf1164afb2660&amp;client=cbc79c14efcebee57402&amp;signature=b09d4cb46eddc50cd3a654667ef72254d0f6fd12">
+                            </a>
+                        </div>
+                        <div class='list-post-description'>
+                            <h3 class='list-post-title'>
+                                <a rel='bookmark' class='list-post-link' href='https://www.aol.co.uk/2018/07/24/thiem-moves-past-moutet-as-monfils-halts-cecchinatos-momentum/'> Thiem moves past Moutet as Monfils halts Cecchinato's momentum</a>
+                            </h3>
+                        </div>
+                    </article>
+                </section>
+            </aside>
+            
+                
+        </div>
+        <footer>
+                <div class="l-footer m-footer">
+                    <div class="m-footer__search-wrapper">
+                        <span>
+                    <a class="m-footer__search-wrapper_logo" href="https://www.aol.co.uk">
+                        <svg class="m-svg-aol-logo" viewBox="0 428.9 612 242.2" enable-background="new 0 428.9 612 242.2" xml:space="preserve">
+                            <g>
+                                <path class="m-svg-aol-logo__path" fill="#333333" d="M333.1,481.9c64.4,0,95.4,51,95.4,94.6c0,43.6-31,94.6-95.4,94.6s-95.4-51-95.4-94.6
+                                C237.9,532.9,268.8,481.9,333.1,481.9z M333.1,621.3c23,0,42.5-18.9,42.5-44.8c0-26-19.5-44.8-42.5-44.8s-42.3,18.9-42.3,44.8
+                                C290.8,602.3,310.3,621.3,333.1,621.3z"/>
+                            <g>
+                                <path class="m-svg-aol-logo__path" fill="#333333" d="M458.4,428.9h53.7V666h-53.7V428.9z"/>
+                            </g>
+                            <g>
+                            <g>
+                                <path class="m-svg-aol-logo__path" fill="#333333" d="M576.3,596.3c-19.7,0-35.6,15.9-35.6,35.7c0,19.7,15.9,35.6,35.6,35.6c19.7,0,35.7-15.9,35.7-35.6
+                                C611.8,612.2,595.9,596.3,576.3,596.3z"/>
+                            </g>
+                            </g>
+                                <path class="m-svg-aol-logo__path" fill="#333333" d="M141.2,428.9H93.5L0,666h63.3l12.4-34.3H158l11.5,34.3h63.9L141.2,428.9z M92.4,583.6l24.9-82.6l24.9,82.6
+                                H92.4z"/>
+                            </g>
+                        </svg>
+                    </a>
+                </span>
+                    </div>
+                    <div class="m-footer__links">
+                        <div class="m-footer__links__row1 uk_footer">
+                            <a class="footer-link" href="http://corp.aol.co.uk/">ABOUT AOL</a>
+                            <a class="footer-link" href="https://help.aol.co.uk/contact/">CONTACT</a>
+                            <a class="footer-link" href="http://privacy.aol.co.uk/">PRIVACY POLICY</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <div class="message-wrapper">
+                    <section class="newsletter-signup-form">
+                        <span class="sign-up-close">×</span>
+                        <h3 class="m-title aside-entries__title">Let us send you our Newsletter</h3>
+                        <div class="m-text">
+                            <p class="m-text-desc text-side-indent">Our editors will email you a roundup of their favourite stories from across AOL</p>
+                        </div>
+                        <div id="aol-newsletter" class="aol-newsletter ">
+                            <form id="signup-form">
+                                <p style="display:none">Sign up using your AOL email or <br/><a id="different-address" class="different-address">use different address</a></p>
+                                <div class="sign-up-input-wrapper">
+                                    <input type="text" placeholder="Enter your email address" class="email-input signup-email" value="" id="emailValue" />
+                                    <input type="button" value="Sign Up" class="aol-btn secondary-btn button send-sail-throu-signup" id="send-sail-throu-signup" />
+                                </div>
+                                <span class="sign-up-error-message" style="display: none;">Please enter valid email address.</span>
+                            </form>
+                        </div>
+        
+                    </section>
+                </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/emailCheck.js"></script>
+    <script src="js/modernizr-custom-all.js"></script>
+    <script src="js/embla.js"></script>
+    <script src="js/slider.js"></script>
+    <script>
+
+    var data = {}
+
+    fetch('http://ip-api.com/json/')
+    // get location info with ip-api
+    .then(function(response) {
+        return response.json()
+    })
+    .then(function(locationData) {
+        data = locationData
+        buildBrowserinfo(browserInfo)
+        //console.log(browserInfo)
+    })
+
+    var browserInfo = {
+        // organise browser info detection into an object
+        connection: {
+            label: "Connection",
+            ipAddress: {
+                label: "Your IP address:",
+                value: function() { return (data.query) }
+            },
+            request: {
+                label: "Referer domain:",
+                value: function() { return document.referrer }
+            }
+        },
+        geoLocation: {
+            label: "Request Geo location",
+            location: {
+                label: "Location:",
+                value: function() {
+                    return `${data.city}, ${data.country} (${data.countryCode}), ${data.timezone.split('/')[0]}`
+                }
+            },
+            coordinates: {
+                label: "Coordinates:",
+                value: function() { return `lat: ${data.lat}, long: ${data.lon}` }
+            }
+        },
+        operatingSystem: {
+            label: "Your operating system",
+            request: {
+                label: "Request method:",
+                value: function() {
+                    let OSName="Unknown OS";
+                    if (navigator.appVersion.indexOf("Win")!=-1) OSName="Windows"
+                    if (navigator.appVersion.indexOf("Mac")!=-1) OSName="MacOS"
+                    if (navigator.appVersion.indexOf("X11")!=-1) OSName="UNIX"
+                    if (navigator.appVersion.indexOf("Linux")!=-1) OSName="Linux"
+
+                    return OSName
+                }
+            }
+        },
+        browser: {
+            label: "Your browser",
+            info: {
+                label: "Version:",
+                value: function(){
+                    // from: https://stackoverflow.com/questions/5916900/how-can-you-detect-the-version-of-a-browser
+                    var ua= navigator.userAgent, tem, 
+                    M= ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || []
+                    if(/trident/i.test(M[1])){
+                        tem=  /\brv[ :]+(\d+)/g.exec(ua) || []
+                        return 'IE '+(tem[1] || '')
+                    }
+                    if(M[1]=== 'Chrome'){
+                        tem= ua.match(/\b(OPR|Edge)\/(\d+)/)
+                        if(tem!= null) return tem.slice(1).join(' ').replace('OPR', 'Opera')
+                    }
+                    M= M[2]? [M[1], M[2]]: [navigator.appName, navigator.appVersion, '-?']
+                    if((tem= ua.match(/version\/(\d+)/i))!= null) M.splice(1, 1, tem[1])
+                    return M.join(' ')
+                }
+            },
+            vendor: {
+                label: "Vendor:",
+                value: function() { return navigator.vendor }
+            },
+            userAgent: {
+                label: "User agent:",
+                value: function() { return navigator.userAgent }
+            }
+        },
+        capabilities: {
+            label: "Your browser capabilities",
+            cookies: {
+                label: "Cookies:",
+                value: function() { return navigator.cookieEnabled ? 'Enabled'  : 'Disabled' }
+            },
+            _ActiveX: {
+                label: "ActiveX:",
+                value: function() { return window.ActiveXObject ? 'Your browser SUPPORTS ActiveX'  : 'Your browser DOES NOT SUPPORT ActiveX controls'}
+            }
+        },
+        computer: {
+            label: "Your computer properties",
+            deviceRes: {
+                label: "Monitor resolution:",
+                value: function() { return `${window.screen.width}x${window.screen.height}` }
+            },
+            colorDepth: {
+                label: "Color depth:",
+                value: function() { return `${screen.colorDepth} bits per pixel` }
+            },
+            browserDimensions: {
+                label: "Browser dimensions:",
+                value: function() { return `${window.screen.availWidth}x${window.screen.availHeight}` }
+            },
+            memory: {
+                label: "Memory:",
+                value: function() { return `${navigator.deviceMemory}GB (estimated)` }
+            },
+            core: {
+                label: "CPU core:",
+                value: function() { return `${navigator.hardwareConcurrency} (estimated)` }
+            },
+            jsVersion: {
+                label: "Javascript version:",
+                value: function() { return jsver }
+            },
+            java: {
+                label: "Java:",
+                value: function() { return navigator.javaEnabled() ? 'Enabled'  : 'Disabled' }
+            }
+        },
+        _HTML5: {
+            label: "HTML5 capabilities",
+            value: {
+                canvas: (function() { return Modernizr.canvas ? 'Yes'  : 'No' })(),
+                canvas_text: (function() { return Modernizr.canvastext ? 'Yes'  : 'No' })(),
+                drag_and_drop: (function() { return 'draggable' in document.createElement('span') ? 'Yes'  : 'No' })(),
+                audio: (function() { return Modernizr.audio })(),
+                video: (function() { return Modernizr.video })(),
+                web_workers: (function() { return Modernizr.webworkers ? 'Yes'  : 'No'  })(),
+                web_sockets: (function() { return Modernizr.websockets ? 'Yes'  : 'No'  })(),
+                session_storage: (function() { return Modernizr.sessionstorage ? 'Yes'  : 'No' })(),
+                web_SQL_database: (function() { return Modernizr.websqldatabase ? 'Yes'  : 'No' })()
+            }
+        },
+        _CSS3: {
+            label: "CSS3 capabilities",
+            value : (function() {
+                let css = {}
+                for (let i in Modernizr) {
+                    if(i.substring(0, 3) === 'css'){
+                        css[i.substring(3, i.length)] = Modernizr[i] ? 'Yes' : 'No'
+                    }
+                }
+
+                return css
+            })()
+        },
+        inputTypes: {
+            label: "Input Types",
+            value: (function() {
+                let inputTypes = {}
+                for (let i in Modernizr.inputtypes) {
+                    inputTypes[i] = Modernizr.inputtypes[i] ? 'Yes' : 'No'
+                }
+
+                return inputTypes
+            })()
+        }
+    }
+
+    function buildBrowserinfo(data) {
+        // extract info from browserInfo object and display it in DOM
+        for (let group in data) {
+            for (let detail in data[group]) {
+                if (typeof data[group][detail] === 'string') {
+                    $('.info-wrapper').append(`<h2>${data[group][detail]}</h2>`)
+                } else {
+                    let html = ''
+                    for (let info in data[group][detail]) {
+                        let label = info === 'label'? '' : `${info}:`
+                        if (typeof data[group][detail][info] === 'string') {
+                            html += `<p>${label}${data[group][detail][info]}`
+                        } else if (typeof data[group][detail][info] === 'function') {
+                            html += `<span><strong>${data[group][detail][info]()}</strong></span></p>`
+                        } 
+                    }
+                    $('.info-wrapper').append(html)
+                }
+            }
+        }
+    }
+
+</script>
+</body>
+</html>
