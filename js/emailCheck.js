@@ -33,3 +33,7 @@ const emailMsg = function(isValid) {
         $('.email-input').val('')
     }
 }
+
+$('form').submit(function() {
+    return false;
+});
