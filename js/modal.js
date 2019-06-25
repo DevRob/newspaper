@@ -35,7 +35,3 @@ function burgerMenu(x) {
     x.classList.toggle("change");
     $('.article-nav').toggle();
 }
-
-$('form').submit(function() {
-    return false;
-});
